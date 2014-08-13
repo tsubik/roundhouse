@@ -59,24 +59,14 @@ namespace roundhouse.databases
             //database.delete_database_if_it_exists();
         }
 
-        public override void run_database_specific_tasks()
-        {
-            if (!database_exists)
-            {
-                //TODO: figure out whether we do this or not
-                //database.run_database_specific_tasks();
-            }
-        }
-
-
         public override void run_sql(string sql_to_run, ConnectionType connection_type)
         {
-            Log.bound_to(this).log_an_info_event_containing("Running statemtent: {0}{1}", Environment.NewLine, sql_to_run);
+            //Log.bound_to(this).log_an_info_event_containing("Running statemtent: {0}{1}", Environment.NewLine, sql_to_run);
         }
 
         public override object run_sql_scalar(string sql_to_run, ConnectionType connection_type)
         {
-            Log.bound_to(this).log_an_info_event_containing("Running statemtent: {0}{1}", Environment.NewLine, sql_to_run);
+            //Log.bound_to(this).log_an_info_event_containing("Running statemtent: {0}{1}", Environment.NewLine, sql_to_run);
             return new object();
         }
 
